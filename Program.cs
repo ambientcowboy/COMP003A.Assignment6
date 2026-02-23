@@ -30,9 +30,9 @@ public class Program
 {
     public static void Main(string [] args)
     {
-        StudyTask task1 = new StudyTask("Title", 5, true);
-        StudyTask task2 = new StudyTask("Title", 5, false);
-        StudyTask task3 = new StudyTask("Title", 5, false);
+        StudyTask task1 = new StudyTask("Read Chapter", 15, true);
+        StudyTask task2 = new StudyTask("Annotate Chapter", 20, true);
+        StudyTask task3 = new StudyTask("Review Notes", 30, false);
         bool running = true;
         while (running)
         {
