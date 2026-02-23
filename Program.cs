@@ -2,12 +2,14 @@
 
 using System;
 
+//Class StudyTask models the framework for the user to create a study task. User may label, configure planned time to be spent on, and mark as incomplete or complete task.
 public class StudyTask
 {
     public string title;
     public int plannedMinutes;
     public bool completed;
 
+    //Initializes a StudyTask with starting value for all fields.
     public StudyTask(string title, int plannedMinutes, bool completed)
     {
         this.title = title;
@@ -15,19 +17,21 @@ public class StudyTask
         this.completed = completed;
     }
 
+    //Displays the specific study task's current field values.
     public void DisplayTask(int itemNumber)
     {
         Console.WriteLine($"Item: " + itemNumber + ": Title: " + title +
                           ", PlannedMinutes: " + plannedMinutes + " Completed: " + completed);
     }
+    //Toggles the tasks completion status, complete or incomplete
     public void ToggleCompleted()
     {
         completed = !completed;
-        
     }
 }
 public class Program
 {
+    //Program allows user to enter study tasks and create a minimalist planner for said tasks, user can update tasks within program and mark them as incomplete or completed within output entry.
     public static void Main(string [] args)
     {
         StudyTask task1 = new StudyTask("Read Chapter", 15, true);
